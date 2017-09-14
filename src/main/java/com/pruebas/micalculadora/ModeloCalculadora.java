@@ -173,6 +173,7 @@ public class ModeloCalculadora {
  private void alfa () {
   if ( oprBajPrio == '+' ) x = x + y;
   if ( oprBajPrio == '-' ) x = x - y;
+     if ( oprBajPrio == 's' ) x = sum();
   y = 1;
  }
 
@@ -180,6 +181,7 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
+
   z = 0;
  }
 
@@ -211,5 +213,11 @@ public class ModeloCalculadora {
       return y;
       else return z;
   }
+
+    public int sum() {
+        y = y*(y+1);
+        y /= 2;
+        return y;
+    }
    
 }
