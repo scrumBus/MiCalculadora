@@ -214,10 +214,4 @@ public class ModeloCalculadora {
       else return z;
   }
 
-    public int sum() {
-        y = y*(y+1);
-        y /= 2;
-        return y;
-    }
-   
 }
