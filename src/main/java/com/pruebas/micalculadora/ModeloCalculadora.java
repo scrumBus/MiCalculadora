@@ -180,15 +180,7 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
-     if(oprAltPrio == '%') y = y%z;
-
   z = 0;
- }
-
- public int mod(){
-     beta();
-     oprAltPrio = '%';
-     return new Integer(y);
  }
 
   private int calculeMCD() {
@@ -219,6 +211,5 @@ public class ModeloCalculadora {
       return y;
       else return z;
   }
-
-
+   
 }
