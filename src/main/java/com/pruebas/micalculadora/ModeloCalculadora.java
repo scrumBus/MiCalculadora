@@ -173,6 +173,7 @@ public class ModeloCalculadora {
  private void alfa () {
   if ( oprBajPrio == '+' ) x = x + y;
   if ( oprBajPrio == '-' ) x = x - y;
+     if ( oprBajPrio == 's' ) x = sum();
   y = 1;
  }
 
@@ -180,7 +181,7 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
-     if ( oprAltPrio == '$' ) y = mcm();
+
   z = 0;
  }
 
@@ -212,18 +213,5 @@ public class ModeloCalculadora {
       return y;
       else return z;
   }
-   public int mcm() {
-        int a = Math.max(y,z);
-        int b = Math.min(y,z);
-        int y2 = y;
-        int z2 = z;
-        y = a;
-        z = b;
-        int resMCD = mcd();
-        y = y2;
-        z = z2;
-        int res = (a / resMCD)*b;
-        return res;
-    }
-    
+
 }
